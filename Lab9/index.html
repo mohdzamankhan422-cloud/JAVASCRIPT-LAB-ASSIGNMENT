@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab 9 - DOM, Validation, Storage and Quiz</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 30px;
+            color: #333;
+        }
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        }
+        h1 { color: #1a73e8; border-bottom: 2px solid #e8f0fe; padding-bottom: 12px; }
+        .section {
+            background: #fafbfc;
+            border: 1px solid #e1e4e8;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 20px;
+        }
+        .section h2 { margin-top: 0; font-size: 1.15rem; color: #202124; }
+        button {
+            background-color: #1a73e8;
+            color: #fff;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+        button:hover { background-color: #1557b0; }
+        input[type="text"] {
+            padding: 8px 12px;
+            border: 1px solid #ccd0d5;
+            border-radius: 4px;
+            width: 60%;
+        }
+        .quiz-option { margin: 8px 0; }
+        .result-box {
+            margin-top: 10px;
+            font-weight: bold;
+            color: #188038;
+        }
+        .instructions {
+            background-color: #e8f0fe;
+            border-left: 4px solid #1a73e8;
+            padding: 10px 14px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lab 9: DOM, Validation, Storage and Quiz</h1>
+        <div class="instructions">
+            <strong>Browser Console Check:</strong> Open Developer Tools (<kbd>F12</kbd> &rarr; <strong>Console</strong>) to see validation results and interactive logs.
+        </div>
+
+        <!-- Task 1: DOM Event Handling -->
+        <div class="section">
+            <h2>Task 1: DOM Heading Change</h2>
+            <h3 id="main-heading">Welcome</h3>
+            <button id="change-btn">Change text</button>
+        </div>
+
+        <!-- Task 2: Form Validation -->
+        <div class="section">
+            <h2>Task 2: Form Validation Function</h2>
+            <p>Check the console for <code>validateForm("Asha")</code> and <code>validateForm("")</code> output.</p>
+        </div>
+
+        <!-- Task 3: Local Storage Persistence -->
+        <div class="section">
+            <h2>Task 3: Local Storage Note Saver</h2>
+            <input type="text" id="note-box" placeholder="Enter your note here...">
+            <button id="save-btn">Save</button>
+            <p id="storage-status" style="font-size: 0.9rem; color: #666; margin-top: 6px;"></p>
+        </div>
+
+        <!-- Task 4: Interactive Quiz -->
+        <div class="section">
+            <h2>Task 4: Quiz</h2>
+            <p><strong>Question:</strong> What is 2 + 3?</p>
+            <div class="quiz-option"><label><input type="radio" name="quiz" value="4"> 4</label></div>
+            <div class="quiz-option"><label><input type="radio" name="quiz" value="5"> 5</label></div>
+            <div class="quiz-option"><label><input type="radio" name="quiz" value="6"> 6</label></div>
+            <button id="check-answer-btn">Check answer</button>
+            <div id="quiz-result" class="result-box"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
